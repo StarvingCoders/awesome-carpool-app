@@ -1,6 +1,7 @@
 import React from 'react';
 
 const RiderPage = (props) => (
+  <div>
   <div>Rider Page</div>
   <label>
     Select Time:
@@ -27,6 +28,7 @@ const RiderPage = (props) => (
       <option value="hack reactor">Hack Reactor</option>
     </select>
   </label>
+  </div>
 
 );
 
