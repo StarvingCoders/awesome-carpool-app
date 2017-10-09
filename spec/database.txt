@@ -1,0 +1,38 @@
+Schema Design
+
+Pools Database:
+ - driver table
+   Fields: id(PRIMARY KEY), username, car, license, seats, home, work, departureTime, 
+
+ - rider table
+   Fields: id(PRIMARY KEY), username
+
+ - rides table
+   Fields: id(PRIMARY KEY), driverID(FOREIGN), driverName, rider1(FOREIGN), rider2(FOREIGN), rider3(FOREIGN), rider4(FOREIGN), rider5(FOREIGN), rider6(FOREIGN), departureDate
+
+
+Database Methods
+
+1. registerDriver
+  - Inserts the username, car, license, seats, home, work and departureTime for the driver into the driver table
+
+2. registerRider
+  - Inserts the username for the rider into the rider table
+
+3. registerDriverRide
+  - Selects the id from the driver table where the driver that scheduled a ride has the same username as the driver in the driver table, this id will be the driverID to insert into the rides table
+
+  - Inserts the driverID, driverName, and departureDate into the rides table
+
+4. getDriverSchedule
+  - Selects from the rides and rider tables the closest future ride date and all the usernames of the current riders that signed up for the ride date, where the driverName passed in is the driverName in the rides table
+
+5. fetchUserData
+  - Selects the information about the driver or rider from the driver or rider table, based on the username
+
+6. getRideList
+  - Selects the information from the rider and rides tables for available rides based on the ride search on the rider client page
+
+7. addRider
+  - Updates the rides table with a new rider when the rider schedules a ride date 
+

@@ -1,57 +1,20 @@
-//post request handler for the /driver route
+Server Route/Request Handlers
 
-//get request handler for the /rides route
+1. POST request handler for the /driver route
+  - calls the registerDriverRide database method
 
-//get request handler for the /rider route
+2. GET request handler for the /rides route
+  - calls the getDriverSchedule database method
 
-//post request handler for the /rider route
+3. GET request handler for the /rider route
+  - calls the getRideList database method
 
-//get request handler for the /registration route
+4. POST request handler for the /rider route
+  - calls the addRider database method
 
-//post request handler for the /registration route
+5. POST request handler for the /registration route
+  - calls the registerDriver database method if the user is a driver
+  - calls the registerRider database method if the user is a rider
 
-//get request handler for the /login route
-
-
-
-app.post('/driver', function (req, res) {
-  console.log('driver schedule posted', req.body);
-  pools.registerDriverRide(req.body, res);
-});
-
-app.get('/rides', function (req, res) {
-  console.log('driver rides get', req.query);
-  pools.getDriverSchedule(req.query, res);
-});
-
-app.get('/rider', function (req, res) {
-  console.log(req.query);
-  pools.getRideList(req, res);
-})
-
-app.post('/rider', function (req, res) {
-  pools.addRider(req, res);
-});
-
-app.get('/registration', function (req, res) {
-  registration.selectAll(function(err, data) {
-    if(err) {
-      res.sendStatus(500);
-    } else {
-      res.json(data);
-    }
-  });
-});
-
-app.get('/login', (req, res) => {
-  pools.fetchUserData(res, req._parsedOriginalUrl.query);
-})
-
-app.post('/registration', function (req, res) {
-  console.log('posted', req.body);
-  if(req.body.hasOwnProperty('driver')) {
-    pools.registerDriver(req.body, res);
-  } else if(req.body.hasOwnProperty('rider')) {
-    pools.registerRider(req.body, res);
-  }
-});
+6. GET request handler for the /login route
+  - calls the fetchUserData database method

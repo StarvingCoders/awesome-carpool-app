@@ -35,25 +35,11 @@ app.get('/rides', function (req, res) {
 app.get('/rider', function (req, res) {
   console.log(req.query);
   pools.getRideList(req, res);
-})
+});
 
 app.post('/rider', function (req, res) {
   pools.addRider(req, res);
 });
-
-app.get('/registration', function (req, res) {
-  registration.selectAll(function(err, data) {
-    if(err) {
-      res.sendStatus(500);
-    } else {
-      res.json(data);
-    }
-  });
-});
-
-app.get('/login', (req, res) => {
-  pools.fetchUserData(res, req._parsedOriginalUrl.query);
-})
 
 app.post('/registration', function (req, res) {
   console.log('posted', req.body);
@@ -62,6 +48,10 @@ app.post('/registration', function (req, res) {
   } else if(req.body.hasOwnProperty('rider')) {
     pools.registerRider(req.body, res);
   }
+});
+
+app.get('/login', (req, res) => {
+  pools.fetchUserData(res, req._parsedOriginalUrl.query);
 });
 
 app.listen(3000, function() {
