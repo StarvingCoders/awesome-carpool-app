@@ -51,10 +51,6 @@ var registerDriverRide = function(driverInfo, res) {
 	});
 }
 
-// WHERE EVENT_START_DATE > NOW() 
-// ORDER BY EVENT_START_DATE 
-// LIMIT 3 
-
 //get list of riders for driver pool date when logging into driver
 var getDriverSchedule = function (driverName, res) {
 	console.log('getDriverSchedule db method');
