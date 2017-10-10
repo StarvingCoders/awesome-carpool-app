@@ -10,6 +10,9 @@ Pools Database:
  - rides table
    Fields: id(PRIMARY KEY), driverID(FOREIGN), driverName, rider1(FOREIGN), rider2(FOREIGN), rider3(FOREIGN), rider4(FOREIGN), rider5(FOREIGN), rider6(FOREIGN), departureDate
 
+ **** TODO ****
+ - Remove home, work, and departureTime fields from the driver table and add them to the rides table
+
 
 Database Methods
 
