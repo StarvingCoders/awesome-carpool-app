@@ -1,7 +1,7 @@
 {
-  "name": "greenfield-carpool",
+  "name": "Carpool This!",
   "version": "1.0.0",
-  "description": "Carpool scheduling app for HR Greenfield project",
+  "description": "Ridesharing Platform",
   "main": "index.jsx",
   "scripts": {
     "react-dev": "webpack -d --watch",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ryanakiyama/hrsf81-greenfield.git"
+    "url": "git+https://github.com/StarvingCoders/carpool-this"
   },
   "author": "Jonathan Ling",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ryanakiyama/hrsf81-greenfield/issues"
+    "url": "https://github.com/StarvingCoders/carpool-this/issues"
   },
-  "homepage": "https://github.com/ryanakiyama/hrsf81-greenfield#readme",
+  "homepage": "https://github.com/StarvingCoders/carpool-this#readme",
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-loader": "^6.3.2",
