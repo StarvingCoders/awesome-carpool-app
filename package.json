@@ -1,5 +1,5 @@
 {
-  "name": "Carpool This!",
+  "name": "carpool-this",
   "version": "1.0.0",
   "description": "Ridesharing Platform",
   "main": "index.jsx",
@@ -29,7 +29,7 @@
     "body-parser": "^1.18.2",
     "bootstrap": "^4.0.0-beta",
     "chai": "^4.1.2",
-    "express": "^4.15.0",
+    "express": "^4.16.2",
     "jquery": "^3.1.1",
     "live-server": "^1.2.0",
     "mocha": "^3.5.3",
